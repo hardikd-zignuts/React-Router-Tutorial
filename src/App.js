@@ -4,6 +4,7 @@ import About from './components/About.jsx'
 import Home from './components/Home.jsx'
 import Navbar from "./components/Navbar.jsx";
 import OrderSummary from "./components/OrderSummary.jsx";
+import ErrorPage from "./components/ErrorPage.jsx";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='about' element={<About />} />
         <Route path='order-summary' element={<OrderSummary />} />
+        <Route path='*' element={<ErrorPage />} />
       </Routes>
     </>
   );
