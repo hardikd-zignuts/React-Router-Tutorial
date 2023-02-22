@@ -10,7 +10,10 @@ import Product from "./components/Product.jsx";
 import FeaturedProduct from "./components/FeaturedProduct";
 import NewProduct from "./components/NewProduct";
 import Users from "./components/Users";
+import IsAuthorized from "./components/Auth/IsAuthorized.jsx";
 import Admin from "./components/Admin";
+import Profile from "./components/Auth/Profile.jsx";
+import Login from "./components/Auth/Login.jsx";
 import UserDetails from "./components/UserDetails";
 const LazyAbout = React.lazy(() => import('./components/About.jsx'))
 
@@ -26,6 +29,10 @@ function App() {
           </React.Suspense>
         } />
         <Route path='order-summary' element={<OrderSummary />} />
+        <Route path='profile' element={
+          <IsAuthorized><Profile /></IsAuthorized>
+        } />
+        <Route path='login' element={<Login />} />
         <Route path='product' element={<Product />} >
           <Route index element={<FeaturedProduct />} />
           <Route path="featured" element={<FeaturedProduct />} />
