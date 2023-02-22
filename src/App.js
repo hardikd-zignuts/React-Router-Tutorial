@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import About from './components/About.jsx'
 import Home from './components/Home.jsx'
 import Navbar from "./components/Navbar.jsx";
+import OrderSummary from "./components/OrderSummary.jsx";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='about' element={<About />} />
+        <Route path='order-summary' element={<OrderSummary />} />
       </Routes>
     </>
   );
