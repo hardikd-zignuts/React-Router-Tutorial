@@ -19,6 +19,9 @@ const Navbar = () => {
       <NavLink style={navLinkStyles} to="/about">
         About
       </NavLink>
+      <NavLink style={navLinkStyles} to="/users">
+        Users
+      </NavLink>
       <NavLink style={navLinkStyles} to="/product">
         Product
       </NavLink>
